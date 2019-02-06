@@ -7,7 +7,7 @@ import java.util.Scanner;
 	public static void main(String args[])
 	{
 		float a, b, res;
-		char choice;
+		int choice;
 		
 		System.out.println("1. Addition");
 		System.out.println("2. Subtraction");
@@ -17,8 +17,8 @@ import java.util.Scanner;
 		System.out.println("Enter Your Choice : ");
 
 		choice = Integer.parseInt(args[0]);
-		a = Integer.parseInt(args[1]);
-		b = Integer.parseInt(args[2]);
+		a = Float.parseFloat(args[1]);
+		b = Float.parseFloat(args[2]);
 
 		System.out.println("1st Number: " + a);
 		System.out.println("2nd Number: " + b);
