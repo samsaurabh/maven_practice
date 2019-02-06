@@ -7,59 +7,48 @@ import java.util.Scanner;
 	public static void main(String args[])
 	{
 		float a, b, res;
-		char choice, ch;
-		Scanner scan = new Scanner(System.in);
+		char choice;
+		
+		System.out.println("1. Addition");
+		System.out.println("2. Subtraction");
+		System.out.println("3. Multiplication");
+		System.out.println("4. Division");
+		System.out.println("5. Exit\n");
+		System.out.println("Enter Your Choice : ");
 
-		do
+		choice = Integer.parseInt(args[0]);
+		a = Integer.parseInt(args[1]);
+		b = Integer.parseInt(args[2]);
+
+		System.out.println("1st Number: " + a);
+		System.out.println("2nd Number: " + b);
+
+		switch(choice)
 		{
-			System.out.print("1. Addition\n");
-			System.out.print("2. Subtraction\n");
-			System.out.print("3. Multiplication\n");
-			System.out.print("4. Division\n");
-			System.out.print("5. Exit\n\n");
-			System.out.print("Enter Your Choice : ");
-			choice = scan.next().charAt(0);
+			case '1' :	res = a + b;
+						System.out.print("Result = " + res);
+						break;
 
-			switch(choice)
-			{
-				case '1' :	System.out.print("Enter Two Number : ");
-							a = scan.nextFloat();
-							b = scan.nextFloat();
-							res = a + b;
-							System.out.print("Result = " + res);
-							break;
+			case '2' :	res = a - b;
+						System.out.print("Result = " + res);
+						break;
 
-				case '2' :	System.out.print("Enter Two Number : ");
-							a = scan.nextFloat();
-							b = scan.nextFloat();
-							res = a - b;
-							System.out.print("Result = " + res);
-							break;
+			case '3' :	res = a * b;
+						System.out.print("Result = " + res);
+						break;
 
-				case '3' :	System.out.print("Enter Two Number : ");
-							a = scan.nextFloat();
-							b = scan.nextFloat();
-							res = a * b;
-							System.out.print("Result = " + res);
-							break;
+			case '4' :	res = a / b;
+						System.out.print("Result = " + res);
+						break;
 
-				case '4' :	System.out.print("Enter Two Number : ");
-							a = scan.nextFloat();
-							b = scan.nextFloat();
-							res = a / b;
-							System.out.print("Result = " + res);
-							break;
+			case '5' :	System.exit(0);
+						break;
 
-	      		case '5' :	System.exit(0);
-							break;
-
-	      		default  :	System.out.print("Wrong Choice!!!");
-							break;
-			}
+	      	default  :	System.out.println("Wrong Choice!!!");
+						break;
+		}
 			
-			System.out.print("\n---------------------------------------\n");
-
-		}while(choice != 5);
+		System.out.println("\n---------------------------------------");
 	}
 }
 
